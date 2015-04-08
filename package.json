@@ -1,0 +1,20 @@
+{
+  "name": "react-poker",
+  "version": "0.0.1",
+  "description": "A React component simulating a Texas holdem tournament game",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^4.7.16",
+    "babel-loader": "^4.2.0",
+    "babel-runtime": "^5.0.0-beta1",
+    "normalize.css": "^3.0.3",
+    "webpack": "^1.7.3"
+  },
+  "dependencies": {
+    "react": "^0.13.1"
+  }
+}

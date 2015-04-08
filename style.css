@@ -1,0 +1,87 @@
+
+/* General */
+
+ul { list-style-type: none; margin: 0; padding: 0; }
+ol { margin: 0; margin-left: 23px; padding: 0; }
+ol li { padding: 3px 0; }
+
+button {
+    padding: 6px 10px 5px 10px;
+    margin-right: 20px;
+    background: #4479BA;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+button:hover {
+    background: #356094;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+button:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
+
+button:focus { outline:0; }
+
+/* Containers */
+
+.container { width: 1000px; margin-left: auto; margin-right: auto; }
+.orange-bg { background-color: #ff5800; margin-bottom: 40px; }
+.header { color: #fff; font-size: 20px; padding-top: 15px; padding-bottom: 15px; }
+.col1 { float: left; width: 250px; }
+.col2 { float: left; width: 550px; }
+.col3 { float: left; width: 200px; }
+.clear-both { clear: both; }
+
+.poker-title { margin: 0; -webkit-margin-before: 0; -webkit-margin-after: 0; }
+
+/* Timer */
+
+.current-time { font-size: 200px; margin-top: 50px; margin-bottom: 30px; }
+.timer .buttons { margin-left: 50px; }
+
+
+/* Clock */
+
+.clock { margin-top: 6px; }
+
+
+/* Blinds */
+
+li.active { font-weight: bold; color: #ff5800; }
+.current-blinds { margin-bottom: 30px; }
+.current-blinds li:first-child { margin-bottom: 3px;}
+.current-blinds li:nth-child(2) { font-size: 40px; }
+.blinds-list { margin-bottom: 30px; }
+.blinds-list li { margin: 7px 0;}
+
+/* Debts */
+
+.debts { margin-top: 80px; }
+.debts li { cursor: pointer; }
+li.paid { color: #999; text-decoration: line-through; }
+.debts input { margin-top: 15px; margin-bottom: 10px; }
+.settle { font-size: 12px; color: #999; }
+.no-debts { color: #999; }
+
+/* Pot */
+
+.designation { float: left; width: 60px; }
+.payouts > div { margin-bottom: 10px; }
+.payout { font-size: 20px; }
+.payout div:first-child { float: left; width: 60px; }
+.payout div:nth-child(2) { float: left; width: 60px; font-weight: bold; }
+.pot .buttons { margin-top: 20px; }
+
