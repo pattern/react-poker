@@ -3,6 +3,7 @@
 
 export const buyIn = 20;
 export const startingSeconds = 15 * 60;
+export const smallBlinds = [ 100, 200, 300, 400, 500, 800, 1000, 1500, 2000, 3000, 5000];
 export function payouts( pot ) {
     if ( pot <= 80 ) {
         return [ pot, 0, 0 ];

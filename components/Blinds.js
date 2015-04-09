@@ -2,28 +2,25 @@
 
 import React from 'react';
 
-let smallBlinds = [ 100, 200, 300, 500, 800, 1000, 1500, 2000, 3000, 5000];
-
 class Blind extends React.Component {
     render() {
         let classString = '';
         if ( this.props.active ) {
             classString += 'active';
         }
-        return <li key={ this.props.key } className={ classString }>{ smallBlinds[ this.props.index ] } / { smallBlinds[ this.props.index ] * 2 }</li>
+        return <li key={ this.props.key } className={ classString }>{ this.props.blind } / { this.props.blind * 2 }</li>
     }
 }
 
 class Blinds extends React.Component {
     constructor( props ) {
         this.state = { activeIndex: 0 };
-
         this.raiseBlinds = this.raiseBlinds.bind( this );
         this.lowerBlinds = this.lowerBlinds.bind( this );
     }
 
     raiseBlinds() {
-        if ( this.state.activeIndex + 1 > smallBlinds.length - 1 ) { return; }
+        if ( this.state.activeIndex + 1 > this.props.smallBlinds.length - 1 ) { return; }
         this.setState( { activeIndex: this.state.activeIndex + 1 } );
     }
 
@@ -38,11 +35,11 @@ class Blinds extends React.Component {
                 <h2>Blinds:</h2>
                 <ul className="current-blinds">
                     <li>Current Blind:</li>
-                    <Blind index={ this.state.activeIndex } />
+                    <Blind blind={ this.props.smallBlinds[ this.state.activeIndex ] } key={ this.state.activeIndex + '-large' } />
                 </ul>
                 <ul className="blinds-list">
-                    { smallBlinds.map( ( blind, index ) => {
-                        return <Blind index={ index } key={ index } active={ index === this.state.activeIndex } />
+                    { this.props.smallBlinds.map( ( blind, index ) => {
+                        return <Blind blind={ blind } key={ index } active={ index === this.state.activeIndex } />
                     } ) }
                 </ul>
                 <button onClick={ this.raiseBlinds }>Raise</button>

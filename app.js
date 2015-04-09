@@ -8,7 +8,7 @@ import Pot from './components/Pot.js';
 import Debts from './components/Debts.js';
 import Clock from './components/Clock.js';
 
-import { startingSeconds, payouts, buyIn } from './variables.js';
+import { startingSeconds, payouts, buyIn, smallBlinds } from './variables.js';
 
 class App extends React.Component {
     render() {
@@ -30,7 +30,7 @@ class App extends React.Component {
                 </div>
                 <div className="container">
                     <div className="col1">
-                        <Blinds />
+                        <Blinds smallBlinds={ smallBlinds } />
                     </div>
                     <div className="col2">
                         <Timer startingTime={ startingSeconds } />
