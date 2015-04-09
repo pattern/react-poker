@@ -15,7 +15,6 @@ class Timer extends React.Component {
     }
 
     resetTimer() {
-        console.log('in resetTImer(), this.props.startingTime:', this.props.startingTime);
         this.setState( { secondsLeft: this.props.startingTime } );
         this.play();
     }
@@ -23,7 +22,8 @@ class Timer extends React.Component {
     tick() {
         let nextSecondsLeft = this.state.secondsLeft - 1;
         if ( nextSecondsLeft === 0 ) {
-            this.pause();
+            this.resetTimer();
+            window.dispatchEvent( new Event( 'blinds-up' ) );
         }
         this.setState( { secondsLeft: this.state.secondsLeft - 1 } );
     }

@@ -19,6 +19,14 @@ class Blinds extends React.Component {
         this.lowerBlinds = this.lowerBlinds.bind( this );
     }
 
+    componentWillMount() {
+        window.addEventListener( 'blinds-up', this.raiseBlinds, false );
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener( 'blinds-up', this.raiseBlinds, false );
+    }
+
     raiseBlinds() {
         if ( this.state.activeIndex + 1 > this.props.smallBlinds.length - 1 ) { return; }
         this.setState( { activeIndex: this.state.activeIndex + 1 } );

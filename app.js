@@ -11,6 +11,22 @@ import Clock from './components/Clock.js';
 import { startingSeconds, payouts, buyIn, smallBlinds } from './variables.js';
 
 class App extends React.Component {
+    componentWillMount() {
+        window.addEventListener( 'blinds-up', this.handleBlindsUp, false );
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener( 'blinds-up', this.handleBlindsUp, false );
+    }
+
+    handleBlindsUp() {
+        let body = document.getElementsByTagName( 'body' )[0];
+        body.classList.add( 'flashing' );
+        setTimeout( function() { body.classList.remove( 'flashing' ); }, 1700 );
+        setTimeout( function() { body.classList.add( 'flashing' ); }, 1800 );
+        setTimeout( function() { body.classList.remove( 'flashing' ); }, 3500 );
+    }
+
     render() {
         return (
             <div>

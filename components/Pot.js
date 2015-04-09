@@ -34,7 +34,7 @@ class Pot extends React.Component {
                 <div className="payouts">
                     { this.props.payouts( this.state.pot ).map( ( payout, index ) => {
                         return (
-                            <div className="payout">
+                            <div className="payout" key={ index }>
                                 <div>{ index + 1 }{ ordinalAbbrev( index + 1) }:</div>
                                 <div>${ payout }</div>
                                 <div className="clear-both"></div>

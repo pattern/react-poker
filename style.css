@@ -35,7 +35,7 @@ button:active {
 
 button:focus { outline:0; }
 
-/* Containers */
+/* App / Containers */
 
 .container { width: 1000px; margin-left: auto; margin-right: auto; }
 .orange-bg { background-color: #ff5800; margin-bottom: 40px; }
@@ -44,8 +44,33 @@ button:focus { outline:0; }
 .col2 { float: left; width: 550px; }
 .col3 { float: left; width: 200px; }
 .clear-both { clear: both; }
-
 .poker-title { margin: 0; -webkit-margin-before: 0; -webkit-margin-after: 0; }
+
+body.flashing {
+    -webkit-animation-name: flashing; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1.5s; /* Chrome, Safari, Opera */
+    animation-name: flashing;
+    animation-duration: 1.5s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes flashing {
+    0%   { background-color:red; }
+    25%  { background-color:yellow; }
+    50%  { background-color:blue; }
+    75%  { background-color:green; }
+    100% { background-color:red; }
+}
+
+/* Standard syntax */
+@keyframes flashing {
+    0%   { background-color:red; }
+    25%  { background-color:yellow; }
+    50%  { background-color:blue; }
+    75%  { background-color:green; }
+    100% { background-color:red; }
+}
+
 
 /* Timer */
 
