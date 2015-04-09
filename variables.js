@@ -9,7 +9,9 @@ export function payouts( pot ) {
         return [ pot, 0, 0 ];
     } else if ( pot <= 140 ) {
         return [ pot - 30, 30, 0 ];
-    } else {
+    } else if ( pot <= 180 ) {
         return [ pot - 60, 40, 20 ];
+    } else {
+        return [ pot - 80, 60, 20 ];
     }
 };
