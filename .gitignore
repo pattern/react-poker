@@ -1,4 +1,6 @@
 
 bundle.js
 node_modules/
-build/
+.DS_Store
+.idea
+bin/
