@@ -3,7 +3,7 @@ all: build
 
 build:
 	npm install
-	npm build
+	npm build.js
 
 clean:
 	rm -rf build/
